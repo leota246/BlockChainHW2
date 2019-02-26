@@ -13,3 +13,9 @@ After that, you will enter the salt hash fist. Once the salt term is found, you 
 #### Solution
 - salt is slayer
 - password is slayerharib
+
+## For question d
+you need to comment out the first and second method *sha1()* *salt()*
+and uncomment the *space ()* method at the bottom. You then will enter a hash
+#### Solutions
+- 
