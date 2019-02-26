@@ -51,5 +51,22 @@ def salt ():
             continue
     print 'Cannot find a match'
 
-sha1 ()
-#salt ()
+def space ():
+    hash = raw_input('enter hash \n')
+    count = 0
+    for firstAttempt in password:
+        for secondAttempt in password:
+            hashAttempt = hashlib.sha1(bytes(firstAttempt + " " + secondAttempt)).hexdigest()
+            print 'checking ', firstAttempt + " " + secondAttempt
+            count += 1
+    # check if match
+            if hashAttempt == hash:
+                print 'MATCH! THE PASSWORD IS ', firstAttempt + " " + secondAttempt
+                exit ()
+            elif hashAttempt != hash:
+                continue
+    print 'Cannot find a match'
+    
+sha1()
+# salt ()
+# space ()
