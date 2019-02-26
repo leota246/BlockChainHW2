@@ -53,6 +53,7 @@ def salt ():
 
 def space ():
     hash = raw_input('enter hash \n')
+    start_time = time.time()
     count = 0
     for firstAttempt in password:
         for secondAttempt in password:
@@ -62,6 +63,7 @@ def space ():
     # check if match
             if hashAttempt == hash:
                 print 'MATCH! THE PASSWORD IS ', firstAttempt + " " + secondAttempt
+                print 'It takes ', count, 'attempt(s) in ', time.time() - start_time
                 exit ()
             elif hashAttempt != hash:
                 continue
